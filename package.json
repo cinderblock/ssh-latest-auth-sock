@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "eslint": "^5.14.1",
+    "prettier": "^1.16.4"
+  }
+}
