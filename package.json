@@ -1,7 +1,55 @@
 {
+  "name": "ssh-latest-auth-sock",
+  "version": "1.0.0",
+  "description": "SSH agent forwarder that always routes to the most-recently-active SSH_AUTH_SOCK on the host. Useful when multiple SSH sessions land on the same box and you want a single, stable auth.sock symlink.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "ssh-latest-auth-sock": "dist/cli.js"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/index.d.ts",
+    "dist/index.d.ts.map",
+    "dist/cli.js",
+    "dist/cli.js.map"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/index.test.js",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinderblock/ssh-latest-auth-sock.git"
+  },
+  "keywords": [
+    "ssh",
+    "ssh-agent",
+    "SSH_AUTH_SOCK",
+    "agent-forwarding",
+    "linux"
+  ],
+  "author": "Cameron Tacklind <cameron@tacklind.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cinderblock/ssh-latest-auth-sock/issues"
+  },
+  "homepage": "https://github.com/cinderblock/ssh-latest-auth-sock#readme",
   "devDependencies": {
-    "@types/node": "^11.9.4",
-    "eslint": "^5.14.1",
-    "prettier": "^1.16.4"
+    "@types/node": "^22.19.19",
+    "typescript": "^6.0.3"
   }
 }
