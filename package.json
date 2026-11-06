@@ -49,7 +49,7 @@
   },
   "homepage": "https://github.com/cinderblock/ssh-latest-auth-sock#readme",
   "devDependencies": {
-    "@types/node": "^26.1.1",
+    "@types/node": "^22.20.5",
     "typescript": "^7.0.2"
   }
 }
